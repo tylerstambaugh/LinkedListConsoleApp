@@ -42,11 +42,13 @@ public class Deque<T>
 
     public void Unshift(T value)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        linkedList.AddFirst(value);
     }
 
     public T Shift()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        var returnObj = linkedList.First.Value;
+        linkedList.RemoveFirst();
+        return returnObj;
     }
 }
